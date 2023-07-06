@@ -37,4 +37,4 @@ jobs:
       - run: mkdir ~/.ssh
       - run: 'echo "$SSH_KEY" >> ~/.ssh/github-action'
       - run: chmod 400 ~/.ssh/github-action
-      - run: rsync -e ssh dist github-actions-tutorial:~/
+      - run: rsync -e ssh dist dev-multitool:~/
