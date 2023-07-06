@@ -32,9 +32,14 @@ jobs:
         with:
           node-version: 16
           cache: 'yarn'
-      - run: yarn install
-      - run: yarn build
-      - run: mkdir ~/.ssh
-      - run: 'echo "$SSH_KEY" >> ~/.ssh/github-action'
-      - run: chmod 400 ~/.ssh/github-action
-      - run: rsync -e ssh dist dev-multitool:~/
+      
+      - name: Build
+        run: |
+          yarn install
+          yarn build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: main
+      
