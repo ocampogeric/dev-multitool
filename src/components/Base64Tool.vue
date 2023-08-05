@@ -103,7 +103,7 @@ const copyDecodedContent = async () => {
                 </v-row>
                 <v-row justify="start">
                     <v-col cols="12" class="pb-0 mb-0">
-                        <v-textarea v-model="data.inputDecoder" class="" label="String to be encoded" variant="outlined"></v-textarea>
+                        <v-textarea v-model="data.inputDecoder" class="" label="String to be Decoded" variant="outlined"></v-textarea>
                     </v-col>
                     <v-col cols="auto" class="pt-0 mt-0">
                         <v-btn @click="decode" variant="outlined">Decode</v-btn>
@@ -111,7 +111,7 @@ const copyDecodedContent = async () => {
                 </v-row>
                 <v-row justify="end">
                     <v-col cols="12" class="mt-6 pb-0 mb-0">
-                        <v-textarea v-model="data.outputDecoder" label="Encoded String" variant="outlined"></v-textarea>
+                        <v-textarea v-model="data.outputDecoder" label="Decoded String" variant="outlined"></v-textarea>
                     </v-col>
                     <v-col cols="auto" class="pt-0 mt-0">
                         <v-btn 
