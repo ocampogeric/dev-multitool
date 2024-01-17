@@ -27,9 +27,9 @@ const goToBase64 = () => {
       </v-app-bar>
       <v-main id="content-wrap">
         <v-container fluid>
-          <v-row>
-            <v-col align-self="start">
-              <router-view />
+          <v-row justify="center">
+            <v-col lg="10" xl="8">
+              <router-view/>
             </v-col>
           </v-row>
         </v-container>
