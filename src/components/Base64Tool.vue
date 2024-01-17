@@ -80,7 +80,7 @@ const copyDecodedContent = async () => {
                 </v-row>
                 <v-row justify="end">
                     <v-col cols="12" class="mt-6 pb-0 mb-0">
-                        <v-textarea v-model="data.outputEncoder" label="Encoded string" variant="outlined"></v-textarea>
+                        <v-textarea v-model="data.outputEncoder" label="Encoded string" variant="outlined" readonly></v-textarea>
                     </v-col>
                     <v-col cols="auto" class="pt-0 mt-0">
                         <v-btn 
@@ -89,7 +89,8 @@ const copyDecodedContent = async () => {
                             variant="outlined"
                             :loading="data.encodedTextLoading"
                             :color="data.encodedTextCopied?'green-darken-3':''"
-                            :append-icon="data.encodedTextCopied?'mdi-check-circle': ''">Copy to clipboard</v-btn>
+                            :append-icon="data.encodedTextCopied?'mdi-check-circle': ''"
+                            :disabled="data.outputEncoder===''">Copy to clipboard</v-btn>
                     </v-col>
                     </v-row>
             </v-container>
@@ -111,7 +112,7 @@ const copyDecodedContent = async () => {
                 </v-row>
                 <v-row justify="end">
                     <v-col cols="12" class="mt-6 pb-0 mb-0">
-                        <v-textarea v-model="data.outputDecoder" label="Decoded string" variant="outlined"></v-textarea>
+                        <v-textarea v-model="data.outputDecoder" label="Decoded string" variant="outlined" readonly></v-textarea>
                     </v-col>
                     <v-col cols="auto" class="pt-0 mt-0">
                         <v-btn 
@@ -120,7 +121,8 @@ const copyDecodedContent = async () => {
                             variant="outlined"
                             :loading="data.decodedTextLoading"
                             :color="data.decodedTextCopied?'green-darken-3':''"
-                            :append-icon="data.decodedTextCopied?'mdi-check-circle': ''">Copy to clipboard</v-btn>
+                            :append-icon="data.decodedTextCopied?'mdi-check-circle': ''"
+                            :disabled="data.outputDecoder===''">Copy to clipboard</v-btn>
                     </v-col>
                     </v-row>
             </v-container>
