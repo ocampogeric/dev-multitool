@@ -26,7 +26,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Use Node.js 16
+      - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
           node-version: 16
